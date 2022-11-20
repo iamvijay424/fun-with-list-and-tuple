@@ -1,0 +1,13 @@
+#Write a Python program to get a list,
+#sorted in increasing order by the last element in each tuple from a given list of non-empty tuples.
+tuplist = [ (1,2),(3,4),(5,1),(6,8), (9,2) ]
+print("list of tuple before sorting:",tuplist)
+
+listlen=len(tuplist)
+for i in range(0,listlen):
+    for j in range(0,listlen- i-1):
+        if(tuplist[j][-1]>tuplist[j+1][-1]):
+            swap=tuplist[j]
+            tuplist[j]=tuplist[j+1]
+            tuplist[j+1]=swap
+print("list of tuple after sorting:"+str(tuplist))            
